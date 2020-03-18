@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "src": "/disallow-xss",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; style-src 'unsafe-inline'",
+        "X-Content-Security-Policy": "sandbox"
+      }
+    }
+  ]
+}

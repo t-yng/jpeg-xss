@@ -1,24 +1,22 @@
-import { useState, useRef } from "react";
-
 const Index = () => {
-  const [text, setText] = useState('');
-  const ref = useRef<HTMLTextAreaElement>(null);
-
-  const handleClick = () => {
-    setText(ref.current?.value ?? '');
-  }
-
   return (
-    <>
-      <div dangerouslySetInnerHTML={{__html: text}}>
-      </div>
-      <div style={{width: 300}}>
-        <textarea style={{width: '100%', boxSizing: 'border-box'}} rows={5} ref={ref}></textarea>
-        <div style={{textAlign: 'right'}}>
-          <button onClick={handleClick}>投稿</button>
-        </div>
-      </div>
-    </>
+    <ul>
+      <li>
+        <p>
+          <a href="/allow-xss">allow xss page</a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="/disallow-xss">disallow xss page</a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href="/disallow-xss-jpeg">disallow xss page with loading injected jpeg</a>
+        </p>
+      </li>
+    </ul>
   )
 }
 
